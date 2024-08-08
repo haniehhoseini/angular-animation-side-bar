@@ -19,7 +19,7 @@ interface SideBar{
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'sample';
+  title = 'animation side bar';
 
   isSidebarCollapsed = false;
   screenWidth = 0;

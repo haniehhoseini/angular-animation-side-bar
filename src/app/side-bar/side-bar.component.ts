@@ -1,7 +1,8 @@
 import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { trigger, style, animate, transition, keyframes } from '@angular/animations';
+import { fadeInOut } from '../animations/fadeInOut.animation';
+import { rotate } from '../animations/rotate.animation';
 
 
 export class AppModule { }
@@ -21,29 +22,8 @@ interface SideNavToggle{
   templateUrl: './side-bar.component.html',
   styleUrl: './side-bar.component.scss',
   animations: [
-    trigger('fadeInOut', [
-      transition(':enter' ,[
-        style({ opacity: 0 }),
-        animate('350ms',
-        style({ opacity: 1 })
-        )
-      ]),
-      transition(':leave' ,[
-        style({ opacity: 1 }),
-        animate('350ms',
-        style({ opacity: 0 }),)
-      ])
-    ]),
-    trigger('routate',[
-      transition(':enter' ,[
-        animate('1000ms',
-        keyframes([
-          style({ transform: 'rotate(0deg)', offset: '0' }),
-          style({ transform: 'rotate(2turn)', offset: '1' })
-        ])
-        )
-      ])
-    ])
+    fadeInOut,
+    rotate
   ]  
 })
 export class SideBarComponent implements OnInit {
