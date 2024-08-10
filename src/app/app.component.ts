@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { BodyComponent } from './body/body.component';
-
+import { LoginComponent } from './auth/login/login.component'; 
 interface SideBar{
   collapsed : boolean;
   screenwidth : number;
@@ -13,7 +13,8 @@ interface SideBar{
   imports: [
     RouterOutlet,
     SideBarComponent,
-    BodyComponent
+    BodyComponent,
+    LoginComponent
     ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

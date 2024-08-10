@@ -4,6 +4,7 @@ import { MediaComponent } from './media/media.component';
 import { PagesComponent } from './pages/pages.component';
 import { ProductsComponent } from './products/products.component';
 import { SettingComponent } from './setting/setting.component';
+import { LoginComponent } from './auth/login/login.component';
 
 export const routes: Routes = [
     {
@@ -25,5 +26,9 @@ export const routes: Routes = [
     {
         path: 'settings',
         component: SettingComponent
+    },
+    {
+        path:'login',
+        component: LoginComponent
     }
 ];
